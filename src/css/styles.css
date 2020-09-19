@@ -1,0 +1,15 @@
+h1 {
+  color: red;
+}
+
+.nav--link {
+  color: rgb(49, 49, 49);
+  letter-spacing: -1px;
+  font-size: 19.5px;
+  line-height: 1.3em;
+  text-decoration: none;
+}
+
+.nav--link-active {
+  text-decoration: underline;
+}
