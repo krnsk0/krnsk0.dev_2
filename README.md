@@ -16,3 +16,4 @@ The SVG icons used here were built Font Awesome and are covered by [this license
 * better font performance
 * favicon
 * image setup
+* analytics

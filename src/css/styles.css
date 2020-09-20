@@ -42,6 +42,7 @@ body {
 .nav--icon {
   width: 1.6rem;
   margin-left: 0.5em;
+  color: var(--text-color);
 }
 
 .nav--links {
@@ -70,4 +71,5 @@ div,
 span,
 li {
   font-family: 'IBM Plex Sans', sans-serif;
+  color: var(--text-color);
 }

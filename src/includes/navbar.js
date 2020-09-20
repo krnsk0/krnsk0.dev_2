@@ -20,7 +20,7 @@ module.exports = (url) => {
       <div class="nav--icon">${medium()}</div>
       <div class="nav--icon">${dev()}</div>
     </div>
-    <div class="nav--icon">${darkmode()}</div>
+    <div class="nav--icon" onclick="toggleMode()">${darkmode()}</div>
   </div>
   <div class="nav--links">
   ${Object.entries(links)
