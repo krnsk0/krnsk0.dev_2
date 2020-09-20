@@ -1,15 +1,51 @@
-h1 {
-  color: red;
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  --background-color: rgb(249, 249, 249);
+  --text-color: rgb(49, 49, 49);
+  --accent-color: DeepSkyBlue;
+  background-color: var(--background-color);
+}
+
+.nav--outer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.nav--inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 1em;
 }
 
 .nav--link {
-  color: rgb(49, 49, 49);
+  font-family: 'Roboto Mono', monospace;
+  color: var(--text-color);
   letter-spacing: -1px;
-  font-size: 19.5px;
-  line-height: 1.3em;
+  font-size: 1.5em;
+  line-height: 1.1em;
   text-decoration: none;
 }
 
 .nav--link-active {
   text-decoration: underline;
+}
+
+.nav--title {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 5em;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: var(--text-color);
+  color: var(--background-color);
+  text-shadow: 0px 4px var(--text-color);
+  letter-spacing: -0.08em;
+}
+
+h1,
+div,
+span {
+  font-family: 'IBM Plex Sans', sans-serif;
 }
