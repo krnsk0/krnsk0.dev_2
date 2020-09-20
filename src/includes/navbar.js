@@ -36,7 +36,9 @@ module.exports = (url) => {
   ${Object.entries(links)
     .map(([path, text]) => {
       const classString = url.startsWith(path) ? 'nav--link-active' : '';
-      return `<a href="${path}" class="nav--link ${classString}">${text}</a>`;
+      return `
+      <a href="${path}" class="nav--link ${classString}">${text}</a>
+      `;
     })
     .join('')}
   </div>
