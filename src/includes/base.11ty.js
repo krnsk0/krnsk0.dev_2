@@ -16,7 +16,8 @@ module.exports.render = async ({ title, content, page: { url } }) => {
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link rel="preload" href="/fonts/roboto-mono-v12-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/rubik-v10-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
     <style>
       ${getMinifiedCss(['reset', 'fonts', 'styles'])}
     </style>

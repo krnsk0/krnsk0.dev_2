@@ -38,7 +38,6 @@ module.exports = (url) => {
       const classString = url.startsWith(path) ? 'nav--link-active' : '';
       return `
       <a href="${path}" class="nav--link ${classString}">${text}</a>
-      <link rel="prefetch" href="${path}">
       `;
     })
     .join('')}
