@@ -5,7 +5,6 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addLayoutAlias('base', 'base.11ty.js');
 
   // Static assets
-  eleventyConfig.addPassthroughCopy('src/css');
   eleventyConfig.addPassthroughCopy('src/images');
 
   // HTML minification
