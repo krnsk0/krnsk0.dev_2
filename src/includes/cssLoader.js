@@ -7,7 +7,6 @@ module.exports.getMinifiedCss = () => {
   const mainCSS = fs.readFileSync(path.join(__dirname, 'styles.css'), 'utf8');
 
   const { styles } = new CleanCSS({}).minify(resetCSS + mainCSS);
-  console.log('styles: ', styles);
 
   return styles;
 };

@@ -1,5 +1,12 @@
 delete require.cache[require.resolve('./icons')];
-const { github, linkedin, medium, dev, darkmode } = require('./icons');
+const {
+  github,
+  linkedin,
+  medium,
+  dev,
+  darkmode,
+  lightmode,
+} = require('./icons');
 
 module.exports = (url) => {
   // key is path, val is text
@@ -20,7 +27,10 @@ module.exports = (url) => {
       <div class="nav--icon">${medium()}</div>
       <div class="nav--icon">${dev()}</div>
     </div>
-    <div class="nav--icon" onclick="toggleMode()">${darkmode()}</div>
+    <div>
+      <div class="nav--icon" onclick="toggleMode()" id="darkmode-toggle">${darkmode()}</div>
+      <div class="nav--icon" onclick="toggleMode()" id="lightmode-toggle">${lightmode()}</div>
+    </div>
   </div>
   <div class="nav--links">
   ${Object.entries(links)

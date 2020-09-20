@@ -12,6 +12,11 @@ const dark = {
   '--text-color': 'rgb(249, 249, 249)',
 };
 const setMode = (isDarkModeOn) => {
+  document.getElementById('darkmode-toggle').style.display =
+    isDarkModeOn === 'true' ? 'none' : 'inherit';
+  document.getElementById('lightmode-toggle').style.display =
+    isDarkModeOn !== 'true' ? 'none' : 'inherit';
+
   Object.entries(isDarkModeOn === 'true' ? dark : light).forEach(
     ([key, val]) => {
       document.body.style.setProperty(key, val);
