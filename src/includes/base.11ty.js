@@ -1,5 +1,15 @@
+const fs = require('fs');
+const path = require('path');
+const { minify } = require('terser');
+
 delete require.cache[require.resolve('./navbar')];
 const navbar = require('./navbar');
+
+const getMinifiedJs = async () => {
+  const rawJs = fs.readFileSync(path.join(__dirname, 'script.js'), 'utf8');
+  const { code } = await minify(rawJs);
+  return code;
+};
 
 module.exports.data = {};
 
@@ -19,36 +29,7 @@ module.exports.render = async ({ title, content, page: { url } }) => {
     ${navbar(url)}
     ${content}
     <script>
-try {
-  localStorage.getItem('isDarkModeOn');
-} catch {
-  localStorage.setItem('isDarkModeOn', 'false');
-}
-const light = {
-  '--background-color': 'rgb(249, 249, 249)',
-  '--text-color': 'rgb(49, 49, 49)',
-};
-const dark = {
-  '--background-color': 'rgb(29, 29, 29)',
-  '--text-color': 'rgb(249, 249, 249)',
-};
-const setMode = (isDarkModeOn) => {
-  Object.entries(isDarkModeOn === 'true' ? dark : light).forEach(
-    ([key, val]) => {
-      document.body.style.setProperty(key, val);
-    }
-  );
-};
-const toggleMode = () => {
-  const isDarkModeOn = localStorage.getItem('isDarkModeOn');
-  const inverse = isDarkModeOn === 'false' ? 'true' : 'false';
-  setMode(inverse);
-  localStorage.setItem('isDarkModeOn', inverse);
-};
-window.addEventListener('DOMContentLoaded', () => {
-  isDarkModeOn = localStorage.getItem('isDarkModeOn');
-  setMode(isDarkModeOn);
-});
+      ${await getMinifiedJs()}
     </script>
   </body>
 </html>
