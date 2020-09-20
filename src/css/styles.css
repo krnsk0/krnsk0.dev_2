@@ -5,6 +5,7 @@ body {
   --text-color: rgb(49, 49, 49);
   --accent-color: DeepSkyBlue;
   background-color: var(--background-color);
+  transition: background-color 0.1s;
 }
 
 .nav--outer {
