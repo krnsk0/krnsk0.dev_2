@@ -16,7 +16,9 @@ module.exports.render = async ({ title, content, page: { url } }) => {
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <!-- this is just the logo font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&text=KRNSK0" rel="stylesheet">
     <style>
       ${getMinifiedCss()}
     </style>
