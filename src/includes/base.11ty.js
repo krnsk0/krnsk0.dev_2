@@ -18,7 +18,7 @@ module.exports.render = async ({ title, content, page: { url } }) => {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <style>
-      ${getMinifiedCss()}
+      ${getMinifiedCss(['global', 'styles'])}
     </style>
     <title>${title}</title>
   </head>

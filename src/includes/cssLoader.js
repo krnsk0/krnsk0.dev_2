@@ -2,11 +2,14 @@ const fs = require('fs');
 const path = require('path');
 const CleanCSS = require('clean-css');
 
-module.exports.getMinifiedCss = () => {
-  const resetCSS = fs.readFileSync(path.join(__dirname, 'reset.css'), 'utf8');
-  const mainCSS = fs.readFileSync(path.join(__dirname, 'styles.css'), 'utf8');
+module.exports.getMinifiedCss = (cssFilenames) => {
+  const rawCss = cssFilenames
+    .map((filename) =>
+      fs.readFileSync(path.join(__dirname, `${filename}.css`), 'utf8')
+    )
+    .join('');
 
-  const { styles } = new CleanCSS({}).minify(resetCSS + mainCSS);
+  const { styles } = new CleanCSS({}).minify(rawCss);
 
   return styles;
 };
