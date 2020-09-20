@@ -44,6 +44,10 @@ body {
   letter-spacing: -0.08em;
 }
 
+.nav--icons {
+  border: 1px solid red;
+}
+
 h1,
 div,
 span {

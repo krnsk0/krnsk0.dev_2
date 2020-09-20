@@ -6,6 +6,7 @@ module.exports = (eleventyConfig) => {
 
   // Static assets
   eleventyConfig.addPassthroughCopy('src/css');
+  eleventyConfig.addPassthroughCopy('src/images');
 
   // HTML minification
   eleventyConfig.addTransform('htmlmin', (content, outputPath) => {
@@ -24,7 +25,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.setBrowserSyncConfig({
     browser: 'google chrome',
     open: 'local',
-    notfy: true,
+    notify: false,
   });
 
   return {

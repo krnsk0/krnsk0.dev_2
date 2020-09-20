@@ -1,30 +1,9 @@
+delete require.cache[require.resolve('./navbar')];
+const navbar = require('./navbar');
+
 module.exports.data = {};
 
-const navbar = (url) => {
-  // key is path, val is text
-  const links = {
-    '/about': 'About',
-    '/projects': 'Projects',
-    '/writing': 'Writing',
-    '/contact': 'Contact',
-  };
-
-  return `
-<nav class="nav--outer">
-  <div class="nav--title">KRNSK0</div>
-  <div class="nav--inner">
-  ${Object.entries(links)
-    .map(([path, text]) => {
-      const classString = url.startsWith(path) ? 'nav--link-active' : '';
-      return `<a href="${path}" class="nav--link ${classString}">${text}</a>`;
-    })
-    .join('')}
-  </div>
-</nav>
-  `;
-};
-
-module.exports.render = ({ title, content, entry, page: { url } }) => {
+module.exports.render = ({ title, content, page: { url } }) => {
   return `
 <!doctype html>
 <html lang="en">
@@ -37,8 +16,26 @@ module.exports.render = ({ title, content, entry, page: { url } }) => {
     <title>${title}</title>
   </head>
   <body>
+
     ${navbar(url)}
     ${content}
+    <script>
+      let darkMode = false;
+      const light = {
+        '--background-color': 'rgb(249, 249, 249)',
+        '--text-color': 'rgb(49, 49, 49)',
+      }
+      const dark = {
+        '--background-color': 'rgb(29, 29, 29)',
+        '--text-color': 'rgb(249, 249, 249)',
+      }
+      const toggleMode = () => {
+        Object.entries(darkMode ? light : dark).forEach(([key, val]) => {
+          document.body.style.setProperty(key, val);
+        });
+        darkMode = !darkMode;
+      }
+    </script>
   </body>
 </html>
   `;
