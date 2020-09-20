@@ -27,6 +27,11 @@ body {
   letter-spacing: -0.08em;
 }
 
+.nav--title:hover {
+  text-shadow: 0px 4px var(--accent-color);
+  -webkit-text-stroke-color: var(--accent-color);
+}
+
 .nav--icons_outer {
   margin-top: 0.4rem;
   display: flex;
@@ -45,6 +50,10 @@ body {
   color: var(--text-color);
 }
 
+.nav--icon:hover {
+  color: var(--accent-color);
+}
+
 .nav--links {
   margin-top: 2rem;
   display: flex;
@@ -60,6 +69,10 @@ body {
   font-size: calc(0.7em + 2.2vw);
   line-height: 1.1em;
   text-decoration: none;
+}
+
+.nav--link:hover {
+  text-decoration: underline var(--accent-color);
 }
 
 .nav--link-active {
