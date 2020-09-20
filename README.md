@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/216097ea-67c1-4822-9774-921d4681922c/deploy-status)](https://app.netlify.com/sites/krnsk0-dev-2/deploys)
+
 # Quickstart
 
 
@@ -11,3 +13,6 @@ The SVG icons used here were built Font Awesome and are covered by [this license
 * pagination
 * better homepage
 * preload links
+* better font performance
+* favicon
+* image setup
