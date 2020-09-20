@@ -6,6 +6,7 @@ module.exports = (eleventyConfig) => {
 
   // Static assets
   eleventyConfig.addPassthroughCopy('src/images');
+  eleventyConfig.addPassthroughCopy('src/fonts');
 
   // HTML minification
   eleventyConfig.addTransform('htmlmin', (content, outputPath) => {

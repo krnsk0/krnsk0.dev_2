@@ -19,4 +19,4 @@ The SVG icons used here were built Font Awesome and are covered by [this license
 * analytics
 * css pipeline
 * conditional build vars for cache clear
-* optimize font load
+* optimize font load: https://google-webfonts-helper.herokuapp.com/

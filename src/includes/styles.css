@@ -1,3 +1,18 @@
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+    url('../fonts/roboto-mono-v12-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''), url('../fonts/rubik-v10-latin-regular.woff2') format('woff2');
+}
+
 body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
