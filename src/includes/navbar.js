@@ -1,3 +1,6 @@
+delete require.cache[require.resolve('./icons')];
+const { github, linkedin, medium, dev, darkmode } = require('./icons');
+
 module.exports = (url) => {
   // key is path, val is text
   const links = {
@@ -10,7 +13,16 @@ module.exports = (url) => {
   return `
 <nav class="nav--outer">
   <div class="nav--title">KRNSK0</div>
-  <div class="nav--inner">
+  <div class="nav--icons_outer">
+    <div class="nav--icons_inner">
+      <div class="nav--icon">${github()}</div>
+      <div class="nav--icon">${linkedin()}</div>
+      <div class="nav--icon">${medium()}</div>
+      <div class="nav--icon">${dev()}</div>
+    </div>
+    <div class="nav--icon">${darkmode()}</div>
+  </div>
+  <div class="nav--links">
   ${Object.entries(links)
     .map(([path, text]) => {
       const classString = url.startsWith(path) ? 'nav--link-active' : '';
