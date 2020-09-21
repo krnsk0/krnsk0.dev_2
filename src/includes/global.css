@@ -123,3 +123,13 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  --background-color: rgb(249, 249, 249);
+  --text-color: rgb(49, 49, 49);
+  --accent-color: DeepSkyBlue;
+  background-color: var(--background-color);
+  transition: background-color 0.1s;
+}
