@@ -42,6 +42,7 @@ module.exports = (url) => {
     })
     .join('')}
   </div>
+  <div class="horiz_rule"></div>
 </nav>
   `;
 };
