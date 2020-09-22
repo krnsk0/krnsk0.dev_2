@@ -23,7 +23,8 @@ const setMode = (isDarkModeOn) => {
     }
   );
 };
-const toggleMode = () => {
+const toggleMode = (event) => {
+  event.preventDefault();
   const isDarkModeOn = localStorage.getItem('isDarkModeOn');
   const inverse = isDarkModeOn === 'false' ? 'true' : 'false';
   setMode(inverse);

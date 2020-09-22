@@ -95,7 +95,7 @@
 }
 
 .nav--link {
-  font-family: 'Rubik', monospace;
+  font-family: 'Rubik';
   color: var(--text-color);
   letter-spacing: -1px;
   font-size: calc(0.7rem + 2.2vw);
@@ -127,12 +127,4 @@
   .horiz_rule {
     width: 32em;
   }
-}
-
-h1,
-div,
-span,
-li {
-  font-family: 'IBM Plex Sans', sans-serif;
-  color: var(--text-color);
 }

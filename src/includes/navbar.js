@@ -18,21 +18,21 @@ module.exports = (url) => {
   };
 
   return `
-<nav class="nav--outer">
-  <div class="nav--title">KRNSK0</div>
+<div class="nav--outer">
+  <a href="/"><div class="nav--title">KRNSK0</div></a>
   <div class="nav--icons_outer">
     <div class="nav--icons_inner">
-      <div class="nav--icon">${github()}</div>
-      <div class="nav--icon">${linkedin()}</div>
-      <div class="nav--icon">${medium()}</div>
-      <div class="nav--icon">${dev()}</div>
+      <div class="nav--icon"><a href="https://github.com/krnsk0" aria-label="Github" target="_blank" rel="noopener noreferrer">${github()}</a></div>
+      <div class="nav--icon"><a href="https://www.linkedin.com/in/krnsk0/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">${linkedin()}</a></div>
+      <div class="nav--icon"><a href="https://medium.com/@krnsk0" aria-label="Medium" target="_blank" rel="noopener noreferrer">${medium()}</a></div>
+      <div class="nav--icon"><a href="https://dev.to/krnsk0/" aria-label="Dev.to" target="_blank" rel="noopener noreferrer">${dev()}</a></div>
     </div>
     <div>
-      <div class="nav--icon" onclick="toggleMode()" id="darkmode-toggle">${darkmode()}</div>
-      <div class="nav--icon" onclick="toggleMode()" id="lightmode-toggle">${lightmode()}</div>
+      <div class="nav--icon" tabIndex="0" onclick="toggleMode(event)" onkeypress="toggleMode(event)" id="darkmode-toggle">${darkmode()}</div>
+      <div class="nav--icon" tabIndex="0" onclick="toggleMode(event)" onkeypress="toggleMode(event)" id="lightmode-toggle">${lightmode()}</div>
     </div>
   </div>
-  <div class="nav--links">
+  <nav class="nav--links">
   ${Object.entries(links)
     .map(([path, text]) => {
       const classString = url.startsWith(path) ? 'nav--link-active' : '';
@@ -41,8 +41,8 @@ module.exports = (url) => {
       `;
     })
     .join('')}
-  </div>
+  </nav>
   <div class="horiz_rule"></div>
-</nav>
+</div>
   `;
 };

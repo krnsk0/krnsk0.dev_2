@@ -1,13 +1,15 @@
 module.exports.data = {
   layout: 'base',
-  title: 'krnsk0 - about',
+  title: 'krnsk0 - projects',
 };
 
-module.exports.render = () => {
+module.exports.render = (data) => {
+  const { collections } = data;
   return `
 
-  <h1>Projects</h1>
+  ${collections.project
+    .map((project) => `<div>${project.data.title}</div>`)
+    .join('')}
 
-  <div>some projects</div>
   `;
 };
