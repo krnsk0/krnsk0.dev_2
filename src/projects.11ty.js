@@ -10,6 +10,5 @@ module.exports.render = (data) => {
   ${collections.project
     .map((project) => `<div>${project.data.title}</div>`)
     .join('')}
-
   `;
 };

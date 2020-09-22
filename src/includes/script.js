@@ -1,5 +1,7 @@
 try {
-  localStorage.getItem('isDarkModeOn');
+  if (!localStorage.getItem('isDarkModeOn')) {
+    localStorage.setItem('isDarkModeOn', 'false');
+  }
 } catch {
   localStorage.setItem('isDarkModeOn', 'false');
 }
