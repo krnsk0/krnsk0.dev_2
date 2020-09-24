@@ -19,3 +19,7 @@ The SVG icons used here were built Font Awesome and are covered by [this license
 * conditional build vars for cache clear
 * optimize font load: https://google-webfonts-helper.herokuapp.com/
 * rss feed
+* 404: https://www.11ty.recipes/recipes/add-a-404-page/
+* sitemap: https://www.11ty.recipes/recipes/add-a-sitemap/
+* global data: https://www.11ty.recipes/recipes/add-global-data/
+* hover tooltips on icons
