@@ -9,15 +9,31 @@ offsite_link: ""
 ---
 
 <style>
-td {border: none; padding: 0px; text-align: center; display: inline-block; margin: 1px; }
-.md_table {margin: 5px auto; font-family: var(--monospace-font); text-align: center; border-collapse: separate;}
+td {
+  border: none;
+  padding: 0;
+  text-align: center;
+  margin: 1px;
+}
+.md_table {
+  margin: 5px auto;
+  font-family: var(--monospace-font);
+  text-align: center;
+  border-collapse: collapse;
+}
 @media (max-width: 700px) {
     .md_table {
       font-size: 0.9em;
     }
 }
-.small td { width: 1.5em; height: 1.5em;}
-.large td { width: 3em; height: 3em; padding-top: 0.75em;}
+.small td {
+  width: 1.5em;
+  height: 1.5em;
+}
+.large td {
+  width: 3em;
+  height: 3em;
+}
 @media (max-width: 700px) {
     .large {
       font-size: 0.8em;
