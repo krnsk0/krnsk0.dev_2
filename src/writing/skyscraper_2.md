@@ -41,7 +41,7 @@ td {border: none; padding: 0px; text-align: center; display: inline-block; margi
 .dark {background-color: rgb(230, 230, 235);}
 .green {color: darkgreen;}
 .red {color: red;}
-.sequence-list {font-family: "IBM Plex Mono", monospace; display: flex; flex-direction: column; align-items: center; }
+.sequence-list {font-family: var(--monospace-font); display: flex; flex-direction: column; align-items: center; }
 
 </style>
 
