@@ -1,8 +1,13 @@
 const htmlmin = require('html-minifier');
+const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 
 module.exports = (eleventyConfig) => {
+  // Syntax highlighting
+  eleventyConfig.addPlugin(syntaxHighlight);
+
   // Layout aliases
   eleventyConfig.addLayoutAlias('base', 'base.11ty.js');
+  eleventyConfig.addLayoutAlias('post', 'post.11ty.js');
 
   // Static assets
   eleventyConfig.addPassthroughCopy('src/images');

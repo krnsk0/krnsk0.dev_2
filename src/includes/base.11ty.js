@@ -19,13 +19,17 @@ module.exports.render = async ({ title, content, page: { url } }) => {
     <link rel="preload" href="/fonts/roboto-mono-v12-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/rubik-v10-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
     <style>
-      ${getMinifiedCss(['reset', 'global', 'nav'])}
+      ${getMinifiedCss(['reset', 'code', 'global', 'nav'])}
     </style>
     <title>${title}</title>
   </head>
   <body>
     ${navbar(url)}
-    ${content}
+    <div class="content--outer">
+      <div class="content--inner">
+        ${content}
+      </div>
+    </div>
     <script>
       ${await getMinifiedJs()}
     </script>

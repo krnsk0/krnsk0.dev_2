@@ -1,0 +1,23 @@
+.post--container {
+  font-family: var(--sans-serif-font);
+  font-size: 1.5rem;
+}
+
+.post--container h1 {
+  font-size: 2em;
+  line-height: 1.2em;
+  text-align: center;
+  margin-bottom: 2.5em;
+}
+
+.post--container h2 {
+  font-weight: bold;
+  font-size: 1.5em;
+  margin-top: 2.5em;
+  margin-bottom: 1em;
+}
+
+.post--container p {
+  margin-bottom: 1.5em;
+  line-height: 1.3em;
+}

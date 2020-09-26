@@ -10,7 +10,7 @@
 }
 
 .nav--title {
-  font-family: 'Roboto Mono', monospace;
+  font-family: var(--monospace-font);
   margin-top: 1rem;
   font-size: calc(3rem + 14vw);
   -webkit-text-stroke-width: 2px;
@@ -95,7 +95,7 @@
 }
 
 .nav--link {
-  font-family: 'Rubik';
+  font-family: var(--sans-serif-font);
   color: var(--text-color);
   letter-spacing: -1px;
   font-size: calc(0.7rem + 2.2vw);

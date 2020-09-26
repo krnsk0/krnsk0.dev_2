@@ -10,7 +10,7 @@ offsite_link: ""
 
 <style>
 td {border: none; padding: 0px; text-align: center; display: inline-block; margin: 1px; }
-.md_table {margin: 5px auto; font-family: "IBM Plex Mono", monospace; text-align: center; border-collapse: separate;}
+.md_table {margin: 5px auto; font-family: "Roboto Mono", monospace; text-align: center; border-collapse: separate;}
 @media (max-width: 700px) {
   .md_table {
     font-size: 0.9em;

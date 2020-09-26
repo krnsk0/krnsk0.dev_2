@@ -23,3 +23,4 @@ The SVG icons used here were built Font Awesome and are covered by [this license
 * sitemap: https://www.11ty.recipes/recipes/add-a-sitemap/
 * global data: https://www.11ty.recipes/recipes/add-global-data/
 * hover tooltips on icons
+* read system dark-light pref on first load
