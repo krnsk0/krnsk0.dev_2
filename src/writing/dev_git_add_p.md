@@ -2,7 +2,6 @@
 title: "A Thorough Introduction to Git's Interactive Patch Mode"
 host: "dev"
 date: 2019-07-28
-published: true
 description: "Using git interactive patch mode to isolate and stage hunks. Covers common usage patterns, commands, intent-to-add, and workflow considerations."
 word_count: 1957
 permalink: ""

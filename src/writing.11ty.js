@@ -10,26 +10,34 @@ const formatDate = (date) => {
   return `${year}.${month}.${day}`;
 };
 
+const getReadTime = (wordCount) => {
+  const wpm = 170;
+  return (wordCount / wpm).toFixed(0);
+};
+
 module.exports.render = (data) => {
   const { collections } = data;
 
   return `
     <div>
     ${collections.writing
-      .map(
-        (post) => `
-      <div>
-      ${formatDate(post.data.date)}
+      .map((post) => {
+        const readTimeInMinutes = getReadTime(post.word_count);
 
-      </div>
-      <div>
-      ${post.data.title}
-      </div>
-      <div>
-      ${post.data.description}
-      <div>
-      `
-      )
+        return `
+        <div>
+          ${formatDate(post.data.date)}
+        </div>
+        <div>
+          <span>${post.data.title}</span>
+          <span>${post.word_count} words</span>
+          <span>${readTimeInMinutes} minutes</span>
+        </div>
+        <div>
+          ${post.data.description}
+        <div>
+      `;
+      })
       .join('\n')}
     </div>
   `;

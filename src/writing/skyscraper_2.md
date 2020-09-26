@@ -2,7 +2,6 @@
 title: "Solving Every Skyscraper Puzzle: Part Two"
 host: "local"
 date: 2019-07-19
-published: true
 description: "Puzzle-solving with constraint propagation and backtracking search in Javascript. Covers clue elimination using sequence filtration, a form of constrained search."
 word_count: 4184
 permalink: "writing/skyscraper-puzzle-2/"
