@@ -1,6 +1,12 @@
 .post--container {
   font-family: var(--sans-serif-font);
-  font-size: 1.5rem;
+  font-size: calc(1.5rem);
+}
+
+@media (min-width: 1080px) {
+  .post--container {
+    font-size: 1.5rem;
+  }
 }
 
 .post--container h1 {

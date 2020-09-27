@@ -8,11 +8,11 @@
 }
 
 @font-face {
-  font-family: 'Rubik';
+  font-family: 'IBM Plex Sans';
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: local(''), url('/fonts/rubik-v10-latin-regular.woff2') format('woff2');
+  src: local(''), url('/fonts/IBM+Plex+Sans.woff2') format('woff2');
 }
 
 body {
@@ -22,7 +22,7 @@ body {
   --text-color: rgb(49, 49, 49);
   --accent-color: DeepSkyBlue;
   --monospace-font: 'Roboto Mono', monospace;
-  --sans-serif-font: 'Rubik', sans-serif;
+  --sans-serif-font: 'IBM Plex Sans', sans-serif;
   background-color: var(--background-color);
   transition: background-color 0.1s;
 }
@@ -42,8 +42,14 @@ h1 {
 
 .content--outer {
   width: 100%;
-  display: flex;
+  display: inherit;
   justify-content: center;
+}
+
+@media (min-width: 1080px) {
+  .content--outer {
+    display: flex;
+  }
 }
 
 .content--inner {

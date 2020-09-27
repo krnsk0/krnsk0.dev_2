@@ -1,5 +1,5 @@
-delete require.cache[require.resolve('./cssLoader')];
-const { getMinifiedCss } = require('./cssLoader');
+delete require.cache[require.resolve('../utils/cssLoader')];
+const { getMinifiedCss } = require('../utils/cssLoader');
 
 module.exports.data = {
   layout: 'base',

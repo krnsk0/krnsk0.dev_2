@@ -1,11 +1,11 @@
 delete require.cache[require.resolve('./navbar')];
 const navbar = require('./navbar');
 
-delete require.cache[require.resolve('./jsLoader')];
-const { getMinifiedJs } = require('./jsLoader');
+delete require.cache[require.resolve('../utils/jsLoader')];
+const { getMinifiedJs } = require('../utils/jsLoader');
 
-delete require.cache[require.resolve('./cssLoader')];
-const { getMinifiedCss } = require('./cssLoader');
+delete require.cache[require.resolve('../utils/cssLoader')];
+const { getMinifiedCss } = require('../utils/cssLoader');
 
 module.exports.data = {};
 
