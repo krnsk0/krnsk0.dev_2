@@ -28,14 +28,12 @@ module.exports.render = (data) => {
     <div class="writing--all-posts">
     ${collections.writing
       .map((post) => {
-        const readTimeInMinutes = getReadTime(post.word_count);
-
         return `
-        <div class="writing--post-info">
+        <div class="writing--post">
           <div class="writing--info-line">
             <span>${formatDate(post.data.date)}</span>
-            <span>${post.word_count} words</span>
-            <span>${readTimeInMinutes} minutes</span>
+            <span>${post.data.word_count} words</span>
+            <span>${getReadTime(post.data.word_count)} minutes</span>
           </div>
           <div>
             <span class="writing--post-title">${post.data.title}</span>

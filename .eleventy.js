@@ -26,11 +26,15 @@ module.exports = (eleventyConfig) => {
     return content;
   });
 
+  // watch css
+  eleventyConfig.addWatchTarget('./src/css/');
+
   // Browsersync options
   eleventyConfig.setBrowserSyncConfig({
     browser: 'google chrome',
     open: 'local',
     notify: false,
+    reloadOnRestart: false,
   });
 
   return {

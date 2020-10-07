@@ -20,6 +20,7 @@ body {
   -webkit-font-smoothing: antialiased;
   --background-color: rgb(249, 249, 249);
   --text-color: rgb(49, 49, 49);
+  --dim-text-color: rgb(129, 129, 129);
   --accent-color: DeepSkyBlue;
   --monospace-font: 'Roboto Mono', monospace;
   --sans-serif-font: 'IBM Plex Sans', sans-serif;
