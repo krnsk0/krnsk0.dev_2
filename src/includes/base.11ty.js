@@ -24,10 +24,12 @@ module.exports.render = async ({ title, content, page: { url } }) => {
     <title>${title}</title>
   </head>
   <body>
-    ${navbar(url)}
-    <div class="content--outer">
-      <div class="content--inner">
-        ${content}
+    <div class="page--container">
+      ${navbar(url)}
+      <div class="content--outer">
+        <div class="content--inner">
+          ${content}
+        </div>
       </div>
     </div>
     <script>

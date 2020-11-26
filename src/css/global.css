@@ -27,33 +27,3 @@ body {
   background-color: var(--background-color);
   transition: background-color 0.1s;
 }
-
-h1 {
-  font-family: var(--sans-serif-font);
-  font-size: calc(2em + 2vw);
-  color: var(--text-color);
-  letter-spacing: -0.05em;
-}
-
-@media (min-width: 1040px) {
-  h1 {
-    font-size: 3.35em;
-  }
-}
-
-.content--outer {
-  width: 100%;
-  display: inherit;
-  justify-content: center;
-}
-
-@media (min-width: 1080px) {
-  .content--outer {
-    display: flex;
-  }
-}
-
-.content--inner {
-  max-width: 860px;
-  margin: 0 1em 0 1em;
-}
